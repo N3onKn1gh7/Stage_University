@@ -1,0 +1,392 @@
+/* Reset de estilos padrões do navegador */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Corpo da página */
+body {
+    background-color: black;
+    font-family: 'Orbitron', sans-serif;
+}
+
+/* Estilos do header */
+header {
+    background-image: url('./img/circuitos.jpeg');
+    border-radius: 90px;
+    filter: brightness(0.8);
+    position: relative;
+    padding: 50px;
+    text-align: center;
+}
+
+/* Lista de navegação */
+header ul {
+    padding-top: 100px;
+    list-style-type: none;
+    color: white;
+    font-size: 32px;
+}
+
+/* Estilos da logo */
+.logo {
+    border-radius: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 250px;
+    animation: moveLogo 2s ease forwards;
+}
+
+/* Animação da logo */
+@keyframes moveLogo {
+    0% {
+        top: -100px;
+        left: -100px;
+        opacity: 0;
+    }
+    100% {
+        top: 20px;
+        left: 20px;
+        opacity: 1;
+    }
+}
+
+/* Estilos do título principal (h1) */
+h1 {
+    color: white;
+    font-size: 80px;
+    margin-top: 20px;
+    opacity: 0;
+    position: relative;
+    animation: moveTitle 1s ease forwards 1s; /* Animação com atraso de 1s */
+}
+
+/* Animação do título (h1) */
+@keyframes moveTitle {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Estilos dos textos (h2, h3, p) */
+h2 {
+    color: green;
+    text-align: center;
+    font-size: 42px;
+    margin-top: 100px;
+}
+
+h3 {
+    color: green;
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 80px;
+    margin-top: 20px;
+}
+
+/* Estilos dos links */
+.moveHome,
+.moveCursos,
+.moveSobre,
+.moveDepoimentos,
+.moveContato {
+    display: inline-block; /* Para que o link se comporte como um botão */
+    padding: 5px 15px; /* Espaçamento interno */
+    background-color: #4CAF50; /* Cor de fundo do botão */
+    color: white; /* Cor do texto */
+    text-align: center; /* Centraliza o texto */
+    border-radius: 20px; /* Borda arredondada */
+    text-decoration: none; /* Remove o underline */
+    transition: background-color 0.3s; /* Transição suave */
+}
+
+/* Efeito de hover (quando o mouse passa por cima do botão) */
+.moveHome:hover,
+.moveCursos:hover,
+.moveSobre:hover,
+.moveDepoimentos:hover,
+.moveContato:hover {
+    background-color: #1a55ac; /* Cor de fundo ao passar o mouse */
+}
+
+/* Animação dos links */
+.moveHome {
+    opacity: 0;
+    position: relative;
+    animation: moveHome 0.5s ease forwards 2s;
+}
+
+.moveCursos {
+    opacity: 0;
+    position: relative;
+    animation: moveHome 0.5s ease forwards 2.5s;
+}
+
+.moveSobre {
+    opacity: 0;
+    position: relative;
+    animation: moveHome 0.5s ease forwards 3.0s;
+}
+
+.moveDepoimentos {
+    opacity: 0;
+    position: relative;
+    animation: moveHome 0.5s ease forwards 3.5s;
+}
+
+.moveContato {
+    opacity: 0;
+    position: relative;
+    animation: moveHome 0.5s ease forwards 4.0s;
+}
+
+/* Animação dos links */
+@keyframes moveHome {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Seção Sobre */
+.sobre {
+    background-image: url('./img/wave.jpeg');
+    background-size: cover;
+    background-position: center;
+    height: 1000px;
+    width: 100%;
+    display: flex; /* Habilita o flexbox */
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+}
+
+.info {
+    background-color: black;
+    opacity: 90%;
+    font-size: 32px;
+    color: white;
+    width: 900px;
+    height: 1000px;
+}
+
+.info h3 {
+    margin: 0;
+    margin-bottom: 50px;
+}
+
+.info p {
+    margin-top: 5px; /* Para garantir espaço entre os textos */
+    font-size: 21px;
+    padding: 5%;
+    line-height: 2;
+    color: rgb(36, 196, 71);
+}
+
+/* Seção Depoimentos */
+.depoimentos {
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+.dep1, .dep2, .dep3, .dep4 {
+    background-color: #0d4d0f;
+    margin-top: 5px;
+    padding: 5%;
+    width: 700px;
+    height: 400px;
+    border-radius: 40px;
+}
+
+.dep1 p, .dep2 p, .dep3 p, .dep4 p {
+    font-size: 18px;
+    line-height: 2;
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.alinhado-esquerda {
+    align-self: flex-start;
+    margin-right: auto;
+}
+
+.alinhado-direita {
+    align-self: flex-end;
+    margin-left: auto;
+}
+
+/* Seção Contato */
+.contato {
+    background-image: url('./img/fundoContato.jpeg');
+    background-position: center;
+    height: 800px;
+    width: 100%;
+    display: flex; /* Habilita o flexbox */
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+}
+
+.infoContato {
+    background-color: black;
+    border-radius: 60px;
+    opacity: 90%;
+    font-size: 18px;
+    color: white;
+    width: 900px;
+    height: 500px;
+    padding: 20px;
+    text-align: center;
+    line-height: 30px;
+}
+
+/* Seção de banner */
+.banner {
+    position: relative;
+    height: 800px;
+    background-image: url('./img/stage.jpeg');
+    background-size: cover;
+    background-position: center;
+    border-radius: 90px;
+}
+
+/* Container de imagens */
+.img-container {
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+
+/* Estilos das imagens circulares */
+.img-left,
+.img-right,
+.img-above-left,
+.img-above-right,
+.img-below-left,
+.img-below-right {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    position: absolute;
+    opacity: 0;
+    transition: opacity 0.5s;
+    animation-play-state: paused;
+    box-shadow: 1px 1px 20px 10px rgb(7, 177, 7); /* Animação começa em pausa */
+}
+
+/* Animações para as imagens circulares */
+.img-left {
+    left: -200px;
+    top: 35%;
+    transform: translateY(-50%);
+    animation: slideInFromLeft 2s forwards;
+}
+
+.img-right {
+    right: -200px;
+    top: 35%;
+    transform: translateY(-50%);
+    animation: slideInFromRight 2s forwards;
+}
+
+.img-above-left {
+    left: 20%;
+    top: 0%;
+    animation: slideInFromAboveLeft 2s forwards;
+}
+
+.img-above-right {
+    right: 20%;
+    top: 0%;
+    animation: slideInFromAboveRight 2s forwards;
+}
+
+.img-below-left {
+    left: 20%;
+    top: 45%;
+    animation: slideInFromBelowLeft 2s forwards;
+}
+
+.img-below-right {
+    right: 20%;
+    top: 45%;
+    animation: slideInFromBelowRight 2s forwards;
+}
+
+/* Keyframes para imagens circulares */
+@keyframes slideInFromLeft {
+    0% {
+        left: -200px;
+        opacity: 0;
+    }
+    100% {
+        left: 80%;
+        opacity: 1;
+    }
+}
+
+@keyframes slideInFromRight {
+    0% {
+        right: -200px;
+        opacity: 0;
+    }
+    100% {
+        right: 80%;
+        opacity: 1;
+    }
+}
+
+@keyframes slideInFromAboveLeft {
+    0% {
+        left: -200px;
+        opacity: 0;
+    }
+    100% {
+        left: 25%;
+        opacity: 1;
+    }
+}
+
+@keyframes slideInFromAboveRight {
+    0% {
+        right: -200px;
+        opacity: 0;
+    }
+    100% {
+        right: 25%;
+        opacity: 1;
+    }
+}
+
+@keyframes slideInFromBelowLeft {
+    0% {
+        left: -200px;
+        opacity: 0;
+    }
+    100% {
+        left: 25%;
+        opacity: 1;
+    }
+}
+
+@keyframes slideInFromBelowRight {
+    0% {
+        right: -200px;
+        opacity: 0;
+    }
+    100% {
+        right: 25%;
+        opacity: 1;
+    }
+}

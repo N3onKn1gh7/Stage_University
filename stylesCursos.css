@@ -1,0 +1,141 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url('./img/circuitos2.jpeg');
+    background-size: cover;
+}
+
+
+/*Movimentação da imagem*/
+
+.engCyber{
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    position: absolute;
+    opacity: 0;
+    transition: opacity 0.5s;
+    animation-play-state: paused;
+    box-shadow: 1px 1px 20px 20px rgb(7, 177, 7);
+    /* Animação começa em pausa */
+}
+
+.engCyber {
+    left: -200px;
+    top: 25%;
+    transform: translateY(-50%);
+    animation: slideInFromLeft 2s forwards;
+}
+
+@keyframes slideInFromLeft {
+    0% {
+        top: -100px;
+        opacity: 0;
+    }
+
+    100% {
+        left: 10%;
+        opacity: 1;
+    }
+}
+
+/*box da descrição do curso*/
+
+.containerDescricao {
+    background-color: black;
+    font-size: 19px;
+    color: white;
+    width: 700px;
+    height: 600px;
+    border-radius: 25px;
+    padding: 30px;
+}
+
+/*Movimentação do texto*/
+
+.containerDescricao {
+    color: white;
+    margin-top: 20px;
+    opacity: 0;
+    position: relative;
+    animation: moveTitle 1s ease forwards 1s;
+    /* Animação com atraso de 1s */
+}
+
+/* Animação do título (h1) */
+@keyframes moveTitle {
+    0% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(70%);
+        opacity: 1;
+    }
+}
+
+
+
+
+
+
+/*Movimentação dos links de texto*/
+
+.home-link, .cursos-link {
+    background-color: black;
+    font-size: 20px;
+    color: white;
+    width: 250px; /* Largura ajustada */
+    height: 50px; /* Altura ajustada */
+    border-radius: 25px;
+    padding: 10px;
+    position: relative; /* Necessário para animar as propriedades top e left */
+    opacity: 0; /* Inicialmente invisível */
+    display: block; /* Agora os links ficam empilhados */
+    margin: -150px 0px; /* Centraliza os links e dá espaçamento vertical */
+    text-align: center; /* Centraliza o texto dentro do botão */
+    line-height: 30px; /* Alinha o texto verticalmente */
+}
+
+/* Animação dos links */
+.home-link, .cursos-link {
+    animation: moveLink 1.5s ease forwards 0.5s; /* Animação com 0.5s de atraso */
+}
+
+@keyframes moveLink {
+    0% {
+        left: -100%; /* Começa fora da tela, à esquerda */
+        top: -100%; /* Sem movimentação vertical */
+        opacity: 0;
+    }
+    100% {
+        left: 0; /* Chega na posição final */
+        top: 0; /* Mantém a posição vertical */
+        opacity: 1;
+    }
+}
+
+/* Movimentação dos links de texto */
+
+.links {
+    background-color: black;
+    font-size: 19px;
+    color: white;
+    width: 100%; /* Ajusta para ocupar toda a largura do container */
+    text-align: center; /* Centraliza os links dentro do container */
+    border-radius: 25px;
+    padding: 30px;
+    margin-top: 20px;
+    background-color: #1a55ac;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    font-size: 28px;
+}
