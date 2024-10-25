@@ -13,7 +13,7 @@ body {
 
 /* Estilos do header */
 header {
-    background-image: url('./img/circuitos.jpeg');
+    background-image: url('../img/circuitos.jpeg');
     border-radius: 90px;
     filter: brightness(0.8);
     position: relative;
@@ -161,7 +161,7 @@ h3 {
 
 /* Seção Sobre */
 .sobre {
-    background-image: url('./img/wave.jpeg');
+    background-image: url('../img/wave.jpeg');
     background-size: cover;
     background-position: center;
     height: 1000px;
@@ -229,7 +229,7 @@ h3 {
 
 /* Seção Contato */
 .contato {
-    background-image: url('./img/fundoContato.jpeg');
+    background-image: url('../img/fundoContato.jpeg');
     background-position: center;
     height: 800px;
     width: 100%;
@@ -255,7 +255,7 @@ h3 {
 .banner {
     position: relative;
     height: 800px;
-    background-image: url('./img/stage.jpeg');
+    background-image: url('../img/stage.jpeg');
     background-size: cover;
     background-position: center;
     border-radius: 90px;
